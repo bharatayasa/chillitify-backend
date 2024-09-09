@@ -4,8 +4,7 @@ const connection = require('../config/db');
 const dotenv = require('dotenv');
 dotenv.config();
 
-// const secretKey = process.env.JWT_SECRET;
-const secretKey = "lopyuichaeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMjA4NzM4MSwiZXhwIjoxNzIyMDkwOTgxfQ.GdmQWYsZ3AOu0VYKSMyxbbOMKjdJhlkQIBIKVx8eJxU";
+const secretKey = process.env.JWT_SECRET;
 
 module.exports = {
     login: async (req, res) => {

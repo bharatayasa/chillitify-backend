@@ -1,7 +1,6 @@
 const axios = require('axios');
 const FormData = require('form-data');
 const dotenv = require('dotenv');
-// const fs = require('fs');
 const connection = require('../config/db');
 dotenv.config();
 

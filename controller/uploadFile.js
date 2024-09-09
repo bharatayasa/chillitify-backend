@@ -4,7 +4,7 @@ const { Storage } = require('@google-cloud/storage');
 const fs = require('fs');
 
 const storage = new Storage({
-    keyFilename: path.join(__dirname, '../key-bucket/chilitify-433503-a1ea573aab92.json'),
+    keyFilename: path.join(__dirname, '../../key-bucket/chilitify-433503-a1ea573aab92.json'),
     projectId: 'chilitify-433503'
 });
 

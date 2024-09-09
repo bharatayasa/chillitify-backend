@@ -1,7 +1,7 @@
 const axios = require('axios');
 const FormData = require('form-data');
 const dotenv = require('dotenv');
-const fs = require('fs');
+// const fs = require('fs');
 const connection = require('../config/db');
 dotenv.config();
 
@@ -54,6 +54,7 @@ module.exports = {
                 });
             });
 
+            // Response sukses
             return res.status(200).json({
                 message: "Success to predict",
                 user_id: req.user.id,

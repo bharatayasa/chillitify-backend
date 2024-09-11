@@ -11,6 +11,13 @@ module.exports = {
         const { username, password } = req.body;
 
         if (!username || !password) {
+            return res.status(400).json({
+                success: false,
+                message: 'Silahkan isi semua field!!!'
+            });
+        }
+
+        if (!username || !password) {
             return res.status(400).send('Username and password are required.');
         }
 

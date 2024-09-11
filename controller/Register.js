@@ -9,12 +9,13 @@ module.exports = {
         if (!username || !name || !email || !password) {
             return res.status(400).json({
                 success: false,
-                message: 'All fields are required.'
+                message: 'Silahkan isi semua field!!'
             });
         }
 
         try {
             const sqlCheck = 'SELECT * FROM users WHERE username = ? OR email = ?';
+
             const existingUser = await new Promise((resolve, reject) => {
                 connection.query(sqlCheck, [username, email], (error, results) => {
                     if (error) {
@@ -27,7 +28,7 @@ module.exports = {
             if (existingUser.length > 0) {
                 return res.status(400).json({
                     success: false,
-                    message: 'Username or email already exists.'
+                    message: 'E-Mail atau Username yang anda masukkan sudah ada'
                 });
             }
 
